@@ -30,7 +30,7 @@ QAlign has been tested under Ubuntu 16.04. Please follow the below three steps t
 ###### Step 1
 Download QAlign.
 ```
-$ git clone https://github.com/olivomao/QAlign.git
+$ git clone https://github.com/joshidhaivat/QAlign.git
 ```
 
 ###### Step 2
