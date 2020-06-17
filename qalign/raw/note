@@ -1,0 +1,4 @@
+- I have used jupyter notebook for converting the nucleotide reads to quantized reads.
+- 'all_functions.py' is the file that contains all the supplementary function definitions that are used either in the notebook or in the post-processing (evaluation) scripts.
+- 'get_approx_ed_score_v2.py', 'analyse_overlap_v2.py', 'get_approx_ed_score_simulation.py' are the scripts for evaluation of the algorithms.
+- Other supporting files like kmermap_models and quantization levels ('qlevels.txt') are also attached.
