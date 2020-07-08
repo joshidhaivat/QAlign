@@ -9,7 +9,7 @@ import pdb
 def main():
   parser = ArgumentParser()
   subs = parser.add_subparsers()
-  pdb.set_trace()
+  #pdb.set_trace()
 
   if sys.argv[1]=='convert':
 
@@ -23,7 +23,7 @@ def main():
 
     args = parser.parse_args()
 
-    pdb.set_trace()
+    #pdb.set_trace()
     convert(
       args.input_fasta,
       args.outdir,
