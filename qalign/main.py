@@ -19,7 +19,7 @@ def main():
     s_parser.add_argument('--outdir')
     s_parser.add_argument('--qlevel', type=int, default=2, help="2 for Q2, 3 for Q3")
     s_parser.add_argument('--rc', type=int, default=1, help="1 for rev-complement, 0 to disable")
-    s_parser.add_argument('--kmerpath', default="None", help="absolute path for kmer model")
+    s_parser.add_argument('--kmerpath', help="absolute path for kmer model")
 
     args = parser.parse_args()
 
@@ -29,7 +29,7 @@ def main():
       args.outdir,
       args.qlevel,
       True if args.rc==1 else False,
-      None if args.kmerpath=="None" else args.kmerpath
+      args.kmerpath
       )
 
   else:

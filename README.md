@@ -49,6 +49,7 @@ python qalign/main.py convert --input_fasta [/path/to/input/fasta/read]
                               --outdir [/path/to/output/folder]
                               --qlevel [quantization_level e.g. 2 or 3]
                               --rc [enable_rev_complementary e.g. 1 or 0]
+                              --kmerpath [/path/to/kmermodel]
 ```
 
 The quantized sequence (and its rev complementary) will be stored in outdir.
