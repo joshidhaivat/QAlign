@@ -60,3 +60,16 @@ An example for conversion to quantized sequence using the test samples:
 ```
 python qalign/main.py convert --input_fasta qalign/test_samples/reads.fasta --outdir qalign/test_samples/output/ --qlevel 2 --rc 1 --kmerpath qalign/kmermap_models/r9.4_6mer_nucleotide_template_model.txt
 ```
+
+###### Alignment of quantized sequences
+Align the quantized reads to quantized genome using minimap2
+
+Alignment of forward strand Q2 reads to Q2 reference:
+```
+minimap2 -c -k 23 ref_q2.fasta res.fasta
+```
+
+Alignment of reverse strands Q2 reads to Q2 reference:
+```
+minimap2 -c -k 23 ref_q2.fasta rc_res.fasta
+```
