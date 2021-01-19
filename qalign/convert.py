@@ -76,7 +76,7 @@ def convert(input_fasta, output_dir, qlevel, rc=False, kmermap_path=None):
   kmer_k = len(list(kmermap.items())[0][0])
 
   qlevels = get_qlevels(kmermap, qlevel)
-
+  print('Quantization level intervals = {}'.format(qlevels))
   # current_reads = [None]*num_reads
   # rc_current_reads = [None]*num_reads
   reads_q = []
@@ -104,11 +104,11 @@ def convert(input_fasta, output_dir, qlevel, rc=False, kmermap_path=None):
         rc_reads_q += [func.get_quantized_seq(current_mean, qlevels)]
       current_mean = []
     if(i%1000==0):
-      print(i)
+      pass#print(i)
 
   run_cmd('mkdir -p %s'%output_dir)
-  func.print_reads_to_fasta(reads_q, '%s/res.fasta'%output_dir)
+  func.print_reads_to_fasta(reads_q, '%s/res.fasta'%output_dir, name)
   if rc is True:
-    func.print_reads_to_fasta(rc_reads_q, '%s/rc_res.fasta'%output_dir)
+    func.print_reads_to_fasta(rc_reads_q, '%s/rc_res.fasta'%output_dir, name)
 
   return
