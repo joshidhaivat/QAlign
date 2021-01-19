@@ -47,10 +47,16 @@ Convert a fasta file to its quantized version. At the root folder of qalign, run
 ```
 python qalign/main.py convert --input_fasta [/path/to/input/fasta/read]
                               --outdir [/path/to/output/folder]
-                              --qlevel [quantization_level e.g. 2 or 3]
-                              --rc [enable_rev_complementary e.g. 1 or 0]
+                              --qlevel [quantization_level e.g. 2 or 3, default = 2]
+                              --rc [enable_rev_complementary e.g. 1 or 0, default = 1]
                               --kmerpath [/path/to/kmermodel]
 ```
 
 The quantized sequence (and its rev complementary) will be stored in outdir.
 
+
+An example for conversion to quantized sequence using the test samples:
+
+```
+python qalign/main.py convert --input_fasta qalign/test_samples/reads.fasta --outdir qalign/test_samples/output/ --qlevel 2 --rc 1 --kmerpath qalign/kmermap_models/r9.4_6mer_nucleotide_template_model.txt
+```
