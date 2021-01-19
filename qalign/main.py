@@ -22,7 +22,15 @@ def main():
     s_parser.add_argument('--kmerpath', help="absolute path for kmer model")
 
     args = parser.parse_args()
-
+    if args.input_fasta==None:
+      print('Please provide an input reads in fasta format')
+      exit(1)
+    if args.outdir==None:
+      print('Please provide an output directory')
+      exit(1)
+    if args.kmerpath==None:
+      print('Please provide the path to the kmer model (should be a text file)')
+      exit(1)
     #pdb.set_trace()
     convert(
       args.input_fasta,
@@ -31,9 +39,11 @@ def main():
       True if args.rc==1 else False,
       args.kmerpath
       )
+    print('Conversion of the sequences is completed successfully!')
 
   else:
-    #TODO
+    print('Not a valid option!')
+    exit(1)
     pass
 
 if __name__ == "__main__":
