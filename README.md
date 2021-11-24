@@ -17,9 +17,9 @@ QAlign is a tool to apply quantization for nanopore long reads.
 
 ### Publication <a id='pub'></a>
 
-If you find QAlign is helpful, we appreciate your citation of its pre-print [version](https://www.biorxiv.org/content/10.1101/862813v1):
+If you find QAlign is helpful, we appreciate your citation of its publication [version](https://doi.org/10.1093/bioinformatics/btaa875):
 
-Dhaivat Joshi, Shunfu Mao, Sreeram Kannan, Suhas Diggavi. QAlign: Aligning nanopore reads accurately using current-level modeling.
+Dhaivat Joshi, Shunfu Mao, Sreeram Kannan, Suhas Diggavi, QAlign: aligning nanopore reads accurately using current-level modeling, Bioinformatics, Volume 37, Issue 5, 1 March 2021, Pages 625–633.
 
 ---
 
